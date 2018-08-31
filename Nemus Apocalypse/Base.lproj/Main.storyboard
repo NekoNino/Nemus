@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Nemus_Apocalypse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdm-He-v90">
+                                <rect key="frame" x="113.5" y="227.5" width="93" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="ISu-ll-vKG"/>
+                                    <constraint firstAttribute="height" constant="45" id="ude-Gt-OOq"/>
+                                </constraints>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <segue destination="hkV-dK-FFo" kind="show" id="0MY-lt-E9Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bdm-He-v90" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XUT-YA-9NF"/>
+                            <constraint firstItem="Bdm-He-v90" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p5L-ge-DuL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Main Game View Controller-->
+        <scene sceneID="Pm2-YJ-Vau">
+            <objects>
+                <viewController id="hkV-dK-FFo" customClass="MainGameViewController" customModule="Nemus_Apocalypse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvX-3o-5lS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-yJ-fMQ">
+                                <rect key="frame" x="8" y="28" width="304" height="330"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-pM-BIF">
+                                <rect key="frame" x="8" y="368" width="304" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="choiceAPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="yQr-Ab-wmT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-wE-DSj">
+                                <rect key="frame" x="8" y="406" width="304" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="choiceBPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="OaG-nl-4ag"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-wl-mMS">
+                                <rect key="frame" x="8" y="442" width="304" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="choiceCPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="UcC-1e-vBO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hFW-I5-JPX" firstAttribute="trailing" secondItem="ncd-yJ-fMQ" secondAttribute="trailing" constant="8" id="8wX-P6-b11"/>
+                            <constraint firstItem="hFW-I5-JPX" firstAttribute="trailing" secondItem="jr4-wl-mMS" secondAttribute="trailing" constant="8" id="CeO-M8-qaz"/>
+                            <constraint firstItem="WVI-pM-BIF" firstAttribute="leading" secondItem="hFW-I5-JPX" secondAttribute="leading" constant="8" id="Gq1-gu-oDv"/>
+                            <constraint firstItem="jr4-wl-mMS" firstAttribute="top" secondItem="VeA-wE-DSj" secondAttribute="bottom" constant="8" id="K6M-ZA-b9F"/>
+                            <constraint firstItem="ncd-yJ-fMQ" firstAttribute="leading" secondItem="hFW-I5-JPX" secondAttribute="leading" constant="8" id="O4S-ed-yfz"/>
+                            <constraint firstItem="jr4-wl-mMS" firstAttribute="leading" secondItem="hFW-I5-JPX" secondAttribute="leading" constant="8" id="S7L-MA-Wke"/>
+                            <constraint firstItem="ncd-yJ-fMQ" firstAttribute="top" secondItem="hFW-I5-JPX" secondAttribute="top" constant="8" id="XKp-8y-dFf"/>
+                            <constraint firstItem="VeA-wE-DSj" firstAttribute="leading" secondItem="hFW-I5-JPX" secondAttribute="leading" constant="8" id="Xg9-ix-woM"/>
+                            <constraint firstItem="VeA-wE-DSj" firstAttribute="top" secondItem="WVI-pM-BIF" secondAttribute="bottom" constant="8" id="i1g-aa-kcF"/>
+                            <constraint firstItem="hFW-I5-JPX" firstAttribute="trailing" secondItem="VeA-wE-DSj" secondAttribute="trailing" constant="8" id="m9i-cE-9Lt"/>
+                            <constraint firstItem="hFW-I5-JPX" firstAttribute="bottom" secondItem="jr4-wl-mMS" secondAttribute="bottom" constant="8" id="nYf-5Q-MO4"/>
+                            <constraint firstItem="WVI-pM-BIF" firstAttribute="top" secondItem="ncd-yJ-fMQ" secondAttribute="bottom" constant="8" id="y92-cg-dF5"/>
+                            <constraint firstItem="hFW-I5-JPX" firstAttribute="trailing" secondItem="WVI-pM-BIF" secondAttribute="trailing" constant="8" id="yD1-nG-Sqz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hFW-I5-JPX"/>
+                    </view>
+                    <connections>
+                        <outlet property="choiceA" destination="WVI-pM-BIF" id="hYs-dn-m8M"/>
+                        <outlet property="choiceB" destination="VeA-wE-DSj" id="kDD-Zr-RIV"/>
+                        <outlet property="choiceC" destination="jr4-wl-mMS" id="kdd-tt-34w"/>
+                        <outlet property="text" destination="ncd-yJ-fMQ" id="lD7-Ia-iKD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jb-PK-nGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078.125" y="133.75"/>
+        </scene>
+    </scenes>
+</document>
