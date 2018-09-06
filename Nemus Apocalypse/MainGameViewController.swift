@@ -8,14 +8,25 @@
 
 import UIKit
 
+
 struct Stage {
     var bgImage:String
     var text:String
-    let choice:[(text: String,nextStage: Int)]
-    
+    let choice:[Choice]
+}
+
+struct Choice {
+    var text:String
+    var nextStage:Int
 }
 
 class MainGameViewController: UIViewController {
+
+    var stages: [Stage] = []
+    var currentStage: Stage?
+    // [stage0, stage1, stage2....]
+    
+    //loadStage(stages[ currentStage.choices[buttonClicked].nextStage ])
 
     @IBOutlet weak var imageView: UIImageView!
     // MARK: - Outlets
@@ -42,14 +53,40 @@ class MainGameViewController: UIViewController {
         choiceB.setTitle("Choice B", for: .normal)
         choiceC.setTitle("Choice C", for: .normal)
         
-        var stage = Stage(bgImage: "bild", text: "Scenario-text",
-                          choice: [
-                            ("Choice 1", 3),
-                            ("Choice 2", 8),
-                            ("Choice 3", 6)
+        var stage0 = Stage(bgImage: "bild", text: "Scenario-text för stage0",
+                           choice: [
+                            Choice(text:"Choice 1", nextStage: 3),
+                            Choice(text:"Choice 2", nextStage: 2),
+                            Choice(text:"Choice 3", nextStage: 3)
             ])
         
-        loadStage(stage: stage)
+        var stage1 = Stage(bgImage: "bild", text: "test 2",
+                           choice: [
+                            Choice(text:"Choice 2-1", nextStage: 0),
+                            Choice(text:"Choice 2-2", nextStage: 2),
+                            Choice(text:"Choice 2-3", nextStage: 3)
+            ])
+        
+        var stage2 = Stage(bgImage: "bild2", text: "Test 3",
+                           choice: [
+                            Choice(text:"Choice 3-1", nextStage: 1),
+                            Choice(text:"Choice 3-2", nextStage: 2),
+                            Choice(text:"Choice 3-3", nextStage: 3)
+            ])
+        
+        var stage3 = Stage(bgImage: "bild", text: "text 4",
+                           choice: [
+                            Choice(text:"Choice 4-1", nextStage: 1),
+                            Choice(text:"Choice 4-2", nextStage: 2),
+                            Choice(text:"Choice 4-3", nextStage: 3)
+            ])
+        
+        stages.append(stage0)
+        stages.append(stage1)
+        stages.append(stage2)
+        stages.append(stage3)
+
+        loadStage(stage: stages[0])
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +95,7 @@ class MainGameViewController: UIViewController {
     }
     
     func loadStage(stage:Stage) {
+        currentStage = stage
         text.text = stage.text
         imageView.image = UIImage(named: stage.bgImage)
         choiceA.setTitle(stage.choice[0].text, for: .normal)
@@ -65,6 +103,7 @@ class MainGameViewController: UIViewController {
         choiceC.setTitle(stage.choice[2].text, for: .normal)
         
     }
+    
     
 
     /*
@@ -80,22 +119,25 @@ class MainGameViewController: UIViewController {
     // MARK: - Actions
     
     
-    /*@IBAction func choiceAPress(_ sender: UIButton) {
+    @IBAction func choiceAPress(_ sender: UIButton) {
         print("Button A pressed")
-        loadState(stageDescription: "Choice B pressed", choiceAText: "Choice A 2", choiceBText: "Choice B 2", choiceCText: "Choice C 2")
+        
+        if var nextStageNumber: Int  = currentStage?.choice[0].nextStage {
+        var nextStage:Stage = stages[nextStageNumber]
+        
+        loadStage(stage: nextStage)
+        }
+        
     }
     
    @IBAction func choiceBPress(_ sender: UIButton) {
-        text.text = "Button B pressed"
-        choiceA.setTitle("Choice A 3", for: .normal)
-        choiceB.setTitle("Choice B 3", for: .normal)
-        choiceC.setTitle("Choice C 3", for: .normal)
         print("Button B pressed")
     }
     @IBAction func choiceCPress(_ sender: UIButton) {
         print("Button C pressed")
     }
-    
+
+    /*
     func loadState(stageDescription stgDesc: String, choiceAText: String, choiceBText: String, choiceCText: String) {
         text.text = stgDesc
         choiceA.setTitle(choiceAText, for: .normal)
@@ -103,6 +145,5 @@ class MainGameViewController: UIViewController {
         choiceC.setTitle(choiceCText, for: .normal)
 
     }
- 
  */
 }
