@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 struct Stage {
@@ -18,19 +19,26 @@ struct Stage {
 struct Choice {
     var text:String
     var nextStage:Int
+    
 }
 
-class MainGameViewController: UIViewController {
 
+class MainGameViewController: UIViewController {
+    
+    
+   
+    
+    
     var stages: [Stage] = []
     var currentStage: Stage?
-    // [stage0, stage1, stage2....]
+    // [stage0, stage1, stage2, stage3 ....]
     
     //loadStage(stages[ currentStage.choices[buttonClicked].nextStage ])
 
     @IBOutlet weak var imageView: UIImageView!
     // MARK: - Outlets
     @IBOutlet weak var text: UITextView!
+    
     
     //Button 1
     @IBOutlet weak var choiceA: UIButton!
@@ -41,6 +49,19 @@ class MainGameViewController: UIViewController {
     //Button 3
     @IBOutlet weak var choiceC: UIButton!
     
+    
+    // hide buttons
+    private func hideAllButtons() {
+        choiceA.isHidden = true
+        choiceB.isHidden = true
+    }
+    
+    // show buttons
+    private func showAllButtons() {
+        choiceA.isHidden = false
+        choiceB.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,41 +71,88 @@ class MainGameViewController: UIViewController {
         
     
         choiceA.setTitle("Choice A", for: .normal)
+        choiceA.layer.cornerRadius = 16
+        
+        
+        
         choiceB.setTitle("Choice B", for: .normal)
+        choiceB.layer.cornerRadius = 16
+    
+        
+        
         choiceC.setTitle("Choice C", for: .normal)
+        choiceC.layer.cornerRadius = 16
         
-        var stage0 = Stage(bgImage: "bild", text: "Scenario-text för stage0",
+    
+        
+        
+        
+        var stage0 = Stage(bgImage: "cloud", text:
+            "Staden Nemus är en helt vanlig stad med många människor, alla levde gött tills en dag."
+            ,
+                           
                            choice: [
-                            Choice(text:"Choice 1", nextStage: 3),
+                            Choice(text:"Choice 1", nextStage: 1),
+                            
                             Choice(text:"Choice 2", nextStage: 2),
-                            Choice(text:"Choice 3", nextStage: 3)
+                            
+                            Choice(text:"Next", nextStage: 1)
+                            
             ])
         
-        var stage1 = Stage(bgImage: "bild", text: "test 2",
+        
+        var stage1 = Stage(bgImage: "cloud", text:
+            "En helt okänd virus smittade staden och alla fruktade alla och djur."
+            ,
                            choice: [
-                            Choice(text:"Choice 2-1", nextStage: 0),
-                            Choice(text:"Choice 2-2", nextStage: 2),
-                            Choice(text:"Choice 2-3", nextStage: 3)
+                            Choice(text:"", nextStage: 0),
+                            
+                            
+                            Choice(text:"", nextStage: 1),
+                            
+                            Choice(text:"Next", nextStage: 2),
+                            
+                            ])
+        
+        var stage2 = Stage(bgImage: "cloud", text: "bjnsjsfnkfnkj",
+                           choice: [
+                            Choice(text:"", nextStage: 1),
+                            Choice(text:"", nextStage: 2),
+                            Choice(text:"Next", nextStage: 3)
             ])
         
-        var stage2 = Stage(bgImage: "bild2", text: "Test 3",
+        var stage3 = Stage(bgImage: "cloud", text: "jndsjngsgfj",
                            choice: [
-                            Choice(text:"Choice 3-1", nextStage: 1),
-                            Choice(text:"Choice 3-2", nextStage: 2),
-                            Choice(text:"Choice 3-3", nextStage: 3)
+                            Choice(text:"", nextStage: 2),
+                            Choice(text:"", nextStage: 3),
+                            Choice(text:"Next", nextStage: 4)
             ])
         
-        var stage3 = Stage(bgImage: "bild", text: "text 4",
+        var stage4 = Stage(bgImage: "cloud", text: "dsnfjsnfjnfndjnfk",
                            choice: [
-                            Choice(text:"Choice 4-1", nextStage: 1),
-                            Choice(text:"Choice 4-2", nextStage: 2),
-                            Choice(text:"Choice 4-3", nextStage: 3)
+                            Choice(text: "", nextStage: 3),
+                            Choice(text: "", nextStage: 4),
+                            Choice(text: "Next", nextStage: 5)
             ])
+        
+        var stage5 = Stage(bgImage: "cloud", text: "hdbajahkddjfkdkdkdk",
+                           choice: [
+          
+                            Choice(text: "", nextStage: 4),
+                            Choice(text: "", nextStage: 5),
+                            Choice(text: "Next", nextStage: 5),
+                            
+            
+            ])
+        
+        
         
         stages.append(stage0)
         stages.append(stage1)
         stages.append(stage2)
         stages.append(stage3)
+        stages.append(stage4)
+        stages.append(stage5)
 
         loadStage(stage: stages[0])
     }
@@ -116,25 +184,44 @@ class MainGameViewController: UIViewController {
     }
     */
     
-    // MARK: - Actions
     
+    // MARK: - Actions
     
     @IBAction func choiceAPress(_ sender: UIButton) {
         print("Button A pressed")
         
         if var nextStageNumber: Int  = currentStage?.choice[0].nextStage {
         var nextStage:Stage = stages[nextStageNumber]
-        
+            
+            
         loadStage(stage: nextStage)
         }
-        
     }
     
    @IBAction func choiceBPress(_ sender: UIButton) {
         print("Button B pressed")
+    
+    if var nextStageNumber: Int = currentStage?.choice[1].nextStage {
+        var nextStage:Stage = stages[nextStageNumber]
+        
+        
+        loadStage(stage: nextStage)
+        
+        }
+    
     }
+    
+    
     @IBAction func choiceCPress(_ sender: UIButton) {
         print("Button C pressed")
+        
+        if var nextStageNumber: Int = currentStage?.choice[2].nextStage {
+            var nextStage:Stage = stages[nextStageNumber]
+            
+            
+            
+            loadStage(stage: nextStage)
+        }
     }
 
     /*
@@ -146,4 +233,11 @@ class MainGameViewController: UIViewController {
 
     }
  */
+    
+    //Hide status bar in full screen
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    
 }

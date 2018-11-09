@@ -25,6 +25,7 @@
                                     <constraint firstAttribute="width" constant="93" id="ISu-ll-vKG"/>
                                     <constraint firstAttribute="height" constant="45" id="ude-Gt-OOq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="New Game"/>
                                 <connections>
                                     <segue destination="hkV-dK-FFo" kind="show" id="0MY-lt-E9Y"/>
@@ -51,18 +52,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bild" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-4c-CwN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-4c-CwN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-yJ-fMQ">
-                                <rect key="frame" x="8" y="28" width="304" height="330"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-yJ-fMQ">
+                                <rect key="frame" x="8" y="28" width="304" height="318"/>
+                                <color key="backgroundColor" red="0.44773682664239639" green="0.44970117892026878" blue="0.45559423575388602" alpha="0.28080985915492956" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-pM-BIF">
                                 <rect key="frame" x="8" y="368" width="304" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="choiceAPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="yQr-Ab-wmT"/>
@@ -70,13 +72,17 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-wE-DSj">
                                 <rect key="frame" x="8" y="406" width="304" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="choiceBPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="OaG-nl-4ag"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-wl-mMS">
-                                <rect key="frame" x="8" y="442" width="304" height="30"/>
+                                <rect key="frame" x="8" y="438" width="304" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="choiceCPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="UcC-1e-vBO"/>
@@ -118,7 +124,4 @@
             <point key="canvasLocation" x="1078.125" y="133.75"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bild" width="960" height="600"/>
-    </resources>
 </document>
