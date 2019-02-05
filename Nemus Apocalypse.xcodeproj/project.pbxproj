@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6F9B179F215122E00010B784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9B179E215122E00010B784 /* LaunchScreen.storyboard */; };
-		6F9B17A921526F140010B784 /* soundName.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F9B17A821526F140010B784 /* soundName.mp3 */; };
 		6FB6EFC421393D3F009F57A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB6EFC321393D3F009F57A9 /* AppDelegate.swift */; };
 		6FB6EFC621393D3F009F57A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB6EFC521393D3F009F57A9 /* ViewController.swift */; };
 		6FB6EFC921393D3F009F57A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB6EFC721393D3F009F57A9 /* Main.storyboard */; };
 		6FB6EFCB21393D41009F57A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB6EFCA21393D41009F57A9 /* Assets.xcassets */; };
 		6FB6EFD621393E35009F57A9 /* MainGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB6EFD521393E35009F57A9 /* MainGameViewController.swift */; };
+		6FD19B0121E4A4B000F2DBF1 /* stage_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FD19B0021E4A4B000F2DBF1 /* stage_data.json */; };
+		6FD19B0321E4C2BC00F2DBF1 /* soundTrack1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FD19B0221E4C2BC00F2DBF1 /* soundTrack1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6F9B179E215122E00010B784 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6F9B17A821526F140010B784 /* soundName.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = soundName.mp3; path = "../../../../Desktop/Game files/Soundtrack/soundName.mp3"; sourceTree = "<group>"; };
 		6FB6EFC021393D3F009F57A9 /* Nemus Apocalypse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nemus Apocalypse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB6EFC321393D3F009F57A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FB6EFC521393D3F009F57A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +26,8 @@
 		6FB6EFCA21393D41009F57A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FB6EFCF21393D41009F57A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FB6EFD521393E35009F57A9 /* MainGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameViewController.swift; sourceTree = "<group>"; };
+		6FD19B0021E4A4B000F2DBF1 /* stage_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stage_data.json; sourceTree = "<group>"; };
+		6FD19B0221E4C2BC00F2DBF1 /* soundTrack1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundTrack1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,12 @@
 				6FB6EFC321393D3F009F57A9 /* AppDelegate.swift */,
 				6FB6EFC521393D3F009F57A9 /* ViewController.swift */,
 				6FB6EFC721393D3F009F57A9 /* Main.storyboard */,
+				6FD19B0221E4C2BC00F2DBF1 /* soundTrack1.mp3 */,
 				6FB6EFD521393E35009F57A9 /* MainGameViewController.swift */,
 				6F9B179E215122E00010B784 /* LaunchScreen.storyboard */,
 				6FB6EFCA21393D41009F57A9 /* Assets.xcassets */,
-				6F9B17A821526F140010B784 /* soundName.mp3 */,
 				6FB6EFCF21393D41009F57A9 /* Info.plist */,
+				6FD19B0021E4A4B000F2DBF1 /* stage_data.json */,
 			);
 			path = "Nemus Apocalypse";
 			sourceTree = "<group>";
@@ -136,7 +139,8 @@
 				6FB6EFCB21393D41009F57A9 /* Assets.xcassets in Resources */,
 				6F9B179F215122E00010B784 /* LaunchScreen.storyboard in Resources */,
 				6FB6EFC921393D3F009F57A9 /* Main.storyboard in Resources */,
-				6F9B17A921526F140010B784 /* soundName.mp3 in Resources */,
+				6FD19B0321E4C2BC00F2DBF1 /* soundTrack1.mp3 in Resources */,
+				6FD19B0121E4A4B000F2DBF1 /* stage_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

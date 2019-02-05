@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,24 +52,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-4c-CwN">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-4c-CwN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-yJ-fMQ">
                                 <rect key="frame" x="8" y="28" width="304" height="318"/>
-                                <color key="backgroundColor" red="0.44773682664239639" green="0.44970117892026878" blue="0.45559423575388602" alpha="0.28080985915492956" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-pM-BIF">
-                                <rect key="frame" x="8" y="368" width="304" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="choiceAPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="yQr-Ab-wmT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-wE-DSj">
                                 <rect key="frame" x="8" y="406" width="304" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,7 +76,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="choiceCPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="UcC-1e-vBO"/>
+                                    <action selector="choiceAPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="FhB-h7-Ptw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-pM-BIF">
+                                <rect key="frame" x="8" y="375" width="304" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="choiceCPress:" destination="hkV-dK-FFo" eventType="touchUpInside" id="LcP-n4-tRF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,8 +101,8 @@
                             <constraint firstItem="jr4-wl-mMS" firstAttribute="leading" secondItem="hFW-I5-JPX" secondAttribute="leading" constant="8" id="S7L-MA-Wke"/>
                             <constraint firstItem="ncd-yJ-fMQ" firstAttribute="top" secondItem="hFW-I5-JPX" secondAttribute="top" constant="8" id="XKp-8y-dFf"/>
                             <constraint firstItem="VeA-wE-DSj" firstAttribute="leading" secondItem="hFW-I5-JPX" secondAttribute="leading" constant="8" id="Xg9-ix-woM"/>
-                            <constraint firstItem="Ly8-4c-CwN" firstAttribute="top" secondItem="hFW-I5-JPX" secondAttribute="top" id="Zim-b7-0s7"/>
-                            <constraint firstItem="Ly8-4c-CwN" firstAttribute="bottom" secondItem="hFW-I5-JPX" secondAttribute="bottom" id="gWr-cg-0gk"/>
+                            <constraint firstItem="Ly8-4c-CwN" firstAttribute="top" secondItem="dvX-3o-5lS" secondAttribute="top" id="Zim-b7-0s7"/>
+                            <constraint firstItem="Ly8-4c-CwN" firstAttribute="bottom" secondItem="dvX-3o-5lS" secondAttribute="bottom" id="gWr-cg-0gk"/>
                             <constraint firstItem="VeA-wE-DSj" firstAttribute="top" secondItem="WVI-pM-BIF" secondAttribute="bottom" constant="8" id="i1g-aa-kcF"/>
                             <constraint firstItem="hFW-I5-JPX" firstAttribute="trailing" secondItem="VeA-wE-DSj" secondAttribute="trailing" constant="8" id="m9i-cE-9Lt"/>
                             <constraint firstItem="hFW-I5-JPX" firstAttribute="bottom" secondItem="jr4-wl-mMS" secondAttribute="bottom" constant="8" id="nYf-5Q-MO4"/>
@@ -112,9 +112,9 @@
                         <viewLayoutGuide key="safeArea" id="hFW-I5-JPX"/>
                     </view>
                     <connections>
-                        <outlet property="choiceA" destination="WVI-pM-BIF" id="hYs-dn-m8M"/>
+                        <outlet property="choiceA" destination="jr4-wl-mMS" id="gEk-lm-W4G"/>
                         <outlet property="choiceB" destination="VeA-wE-DSj" id="kDD-Zr-RIV"/>
-                        <outlet property="choiceC" destination="jr4-wl-mMS" id="kdd-tt-34w"/>
+                        <outlet property="choiceC" destination="WVI-pM-BIF" id="2Ui-ou-L4T"/>
                         <outlet property="imageView" destination="Ly8-4c-CwN" id="HPQ-dO-7sI"/>
                         <outlet property="text" destination="ncd-yJ-fMQ" id="lD7-Ia-iKD"/>
                     </connections>

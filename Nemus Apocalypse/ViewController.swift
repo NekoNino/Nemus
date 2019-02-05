@@ -14,13 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        playSound()
     }
     
     var player: AVAudioPlayer?
     
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "soundName", withExtension: "mp3") else { return }
+        guard let url = Bundle.main.url(forResource: "soundTrack1", withExtension: "mp3") else { return }
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
@@ -37,6 +40,10 @@ class ViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        player?.stop()
     }
     
     

@@ -1,0 +1,356 @@
+[
+    {
+        "stageName": "prologue0",
+        "bgImage": "cloud",
+        "text": "Nemus was a peaceful Town with lots of weirdoes.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 1
+            }
+        ]
+    },
+    {
+        "stageName": "prologue1",
+        "text": "One day, the Town recives a mysterious virus and it infected humans and animals",
+        "bgImage": "cloud",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 2
+            }
+        ]
+    },
+    {
+        "stageName": "prologue2",
+        "text": "The apocalypse started about a month ago and everybody stated to turn into zombies.",
+        "bgImage": "cloud",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 3
+            }
+        ]
+    },
+    {
+        "stageName": "prologue3",
+        "bgImage": "cloud",
+        "text": "My house was on fire and I forgot my gun inside my house.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 4
+            }
+        ]
+    },
+    {
+        "stageName": "prologue4",
+        "bgImage": "burning house",
+        "text": "Should I go back and get it?",
+        "choice": [
+            {
+                "text": "Go back",
+                "nextStage": 5
+            },
+            {
+                "text": "No way!",
+                "nextStage": 9
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd1-0",
+        "bgImage": "burning house",
+        "text": "I needed my gun so I decied to go back and recived it. The smoke was thick and my eyes burned.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 6
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd1-1",
+        "bgImage": "burning house",
+        "text": "Then I heard a load crash and suddenly my body felt numb as the wooden floor collapsed on me.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 7
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd1-3",
+        "bgImage": "burning house",
+        "text": "I broke my leg and saw how fast the fire devoured my whole body.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 8
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd1-4",
+        "text": "Bad End 1",
+        "choice": [
+            {
+                "text": "Game Over",
+                "nextStage": -1
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-0",
+        "bgImage": "burning house",
+        "text": "The house was on fire and there's no way I get out alive even if I found my gun.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 10
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-1",
+        "bgImage": "person",
+        "text": "I saw a wounded man crying for help. He was bitten by something as he crawl on the ground begging me to help him.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 11
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-2",
+        "bgImage": "person",
+        "text": "Please help me, he cried out.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 12
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-3",
+        "bgImage": "person",
+        "text": "(What should I do?)",
+        "choice": [
+            {
+                "text": "Help him.",
+                "nextStage": 24
+            },
+            {
+                "text": "Run away!",
+                "nextStage": 13
+            },
+            {
+                "text": "Pick up the iron bar and kill him.",
+                "nextStage": 20
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-0",
+        "text": "No way. Is this man crazy? He could turn into a zombie.",
+        "bgImage": "cloud",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 14
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-1",
+        "text": "I ran away from the man. I could hear him screaming at me from behind.",
+        "bgImage": "cloud",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 15
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-2",
+        "text": "- Not that way he said. I didn't know what he meant and continue to run as fast as I could.",
+        "bgImage": "cloud",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 16
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-3",
+        "bgImage": "zombies",
+        "text": "Sooner or later I saw the zombie hoard. They where eating the rest of the humans and saw me.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 17
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-4",
+        "bgImage": "zombies",
+        "text": "As I tried to turn away the zombies was everywhere. I was corned by them , as they slowly walked and started to eat me, one by one.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 18
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-5",
+        "bgImage": "zombies",
+        "text": "I lost my limbs one by one and more zombie where gather and I lost my consciousness",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 19
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd2-6",
+        "text": "Bad End 2",
+        "choice": [
+            {
+                "text": "Game Over",
+                "nextStage": -1
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd3-0",
+        "bgImage": "person",
+        "text": "I cannot let him live. If he dissapear there's one zombie dead.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 21
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd3-1",
+        "bgImage": "blood",
+        "text": "I took the iron bar I found on the ground and started approach",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 22
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd3-2",
+        "bgImage": "blood",
+        "text": "He screamed as I smash his head with the iron bar. My whole body was covered in the mans blood.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 23
+            }
+        ]
+    },
+    {
+        "stageName": "badEnd3-3",
+        "bgImage": "zombies",
+        "text": "He's scream was luring the zombies and I was corned my them.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 17
+            }
+        ]
+    },
+    
+    {
+        "stageName": "chapter1-0",
+        "bgImage": "person",
+        "text": "I helped him. I bandage his wound and he thanked me.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 25
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-1",
+        "bgImage": "dog",
+        "text": "- Thank you young lad, My dog bit me bacause he was hungry and I didn't have any food with me.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 26
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-2",
+        "bgImage": "dog",
+        "text": "I got out from my appartment and tried to find some food and the zombie tried to attack me.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 27
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-3",
+        "bgImage": "person",
+        "text": "Oh. He wasn't infected? So he CAN'T turn into a zombie?.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 28
+            }
+        ]
+    },
+    {
+        "stageName": "chapter1-4",
+        "bgImage": "person",
+        "text": "My shop sells weapons so if you need anything just visit me.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 29
+            }
+        ]
+    },
+    
+    {
+        "stageName": "chapter1-5",
+        "bgImage": "cloud",
+        "text": "And so the apocalypse goes on.",
+        "choice": [
+            {
+                "text": "Next",
+                "nextStage": 30
+            }
+        ]
+    },
+    
+    {
+        "stageName": "Ending-demo",
+        "text": "to be continued",
+        "choice": [
+            {
+                "text": "End?",
+                "nextStage": -1
+            }
+        ]
+    }
+    
+]
